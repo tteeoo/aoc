@@ -48,9 +48,14 @@ def usum(b, ns):
                 s += j
     return s
 
+ww = []
+won = []
 for nn in range(len(n)):
     ns = n[:nn]
-    for b in nl:
-        if is_win(b, ns):
-            print(usum(b, ns) * ns[-1])
-            exit(0)
+    for b in range(len(nl)):
+        if is_win(nl[b], ns) and b not in won:
+            ww.append((nn, b))
+            won.append(b)
+
+nn, b = ww[-1]
+print(usum(nl[b], n[:nn]) * n[nn-1])
