@@ -21,10 +21,10 @@ def is_win(b, ns):
                 win = False
         if win: return True
 
-    for i in b:
+    for i in range(len(b[0])):
         win = True
-        for j in range(len(i)):
-            if i[j] not in ns:
+        for j in b:
+            if j[i] not in ns:
                 win = False
         if win: return True
 
