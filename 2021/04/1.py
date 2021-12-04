@@ -30,8 +30,8 @@ def is_win(b, ns):
 
     win = True
     for i in range(5):
-            if b[i][i] not in ns:
-                win = False
+        if b[i][i] not in ns:
+            win = False
     if win: return True
 
     win = True
